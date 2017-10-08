@@ -1,6 +1,6 @@
 
 
-`each`/`forEach`
+* `each`/`forEach`
 兼容数组和可迭代对象，核心：
 ```js
  _.each = _.forEach = function(obj, iteratee, context) {
@@ -20,7 +20,7 @@
 };
 ```
 
-`map`/`collect`
+* `map`/`collect`
 ```js
 // 注意和each中数组于对象处理的不同
 _.map = _.collect = function(obj, iteratee, context) {
@@ -36,7 +36,7 @@ _.map = _.collect = function(obj, iteratee, context) {
 };
 ```
 
-`find`/`detect`
-检测满足某个条件的元素（注意不是索引）
-看实现，是无法通过`_.find(arr, element)`直接查找元素的，只能通过`_.find(arr, (x)=>x==element)`来实现。
-_.findIndex才是返回索引，同样不能直接检索元素。
+* `find`/`detect`
+检测满足某个条件的元素（注意不是索引）。看实现，是无法通过`_.find(arr, element)`直接查找元素的，只能通过`_.find(arr, (x)=>x==element)`来实现。
+
+`findIndex`才是返回索引，同样不能直接检索元素。
