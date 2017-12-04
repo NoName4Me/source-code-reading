@@ -173,6 +173,7 @@
       // The cornerstone, an `each` implementation, aka `forEach`.
       // Handles raw objects in addition to array-likes. Treats all
       // sparse array-likes as if they were dense.
+      // 修改原arry/obj
       _.each = _.forEach = function(obj, iteratee, context) {
         iteratee = optimizeCb(iteratee, context);
         var i, length;
@@ -190,6 +191,7 @@
       };
     
       // Return the results of applying the iteratee to each element.
+      // 不修改原arr/obj
       _.map = _.collect = function(obj, iteratee, context) {
         iteratee = cb(iteratee, context);
         var keys = !isArrayLike(obj) && _.keys(obj),
