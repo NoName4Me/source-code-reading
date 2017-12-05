@@ -1,4 +1,19 @@
 
+* 数组和对象遍历
+
+```js
+function printElement(obj, dir) {
+    // obj可以是数组也可以是对象
+    var keys = !Array.isArray(obj) && Object.keys(obj);
+    var length = (keys || obj).length;
+    console.log(length)
+    // 正反向遍历, dir = 1 or -1
+    for(let idx = dir > 0 ? 0 : length -1; idx >= 0 && idx < length; idx += dir) {
+        console.log('key: %s,\t value: %s',(keys ? keys[idx] : idx),obj[keys ? keys[idx] : idx]);
+    }
+}
+```
+
 
 * `each`/`forEach`
 兼容数组和可迭代对象，核心：
