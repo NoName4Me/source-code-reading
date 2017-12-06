@@ -242,9 +242,14 @@
         var key = keyFinder(obj, predicate, context);
         if (key !== void 0 && key !== -1) return obj[key];
       };
-    
-      // Return all the elements that pass a truth test.
-      // Aliased as `select`.
+
+    /**
+     * Return all the elements that pass a truth test.
+     * @param obj
+     * @param predicate
+     * @param context
+     * @returns {Array}
+     */
       _.filter = _.select = function(obj, predicate, context) {
         var results = [];
         predicate = cb(predicate, context);

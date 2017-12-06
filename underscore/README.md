@@ -36,6 +36,7 @@ function printElement(obj, dir) {
 ```
 
 * `map`/`collect`
+
 ```js
 // 注意和each中数组于对象处理的不同
 _.map = _.collect = function(obj, iteratee, context) {
@@ -52,6 +53,13 @@ _.map = _.collect = function(obj, iteratee, context) {
 ```
 
 * `find`/`detect`
+
 检测满足某个条件的元素（注意不是索引）。看实现，是无法通过`_.find(arr, element)`直接查找元素的，只能通过`_.find(arr, (x)=>x==element)`来实现。
 
 `findIndex`才是返回索引，同样不能直接检索元素。
+
+* `filter`/`select`（返回数组）
+
+如果不是因为返回的是数组，`every`等都可以直接使用`filter`。
+
+* `pluck`
